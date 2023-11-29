@@ -66,8 +66,10 @@ class GameField {
       }
     };
 
-    addCell(currentCell);
-    group.forEach(item => item.clearElement());
+    if (currentCell) {
+      addCell(currentCell);
+      group.forEach(item => item.clearElement());
+    }
   }
 }
 
